@@ -1,0 +1,47 @@
+o comando touch toca num arquivo e se ele n existir ele cria
+
+o echo serve para escrever algo no stdout(standard output) e o operador > conectar o stdout a um arquivo, porem toda vez q usar o operador > ele vai sobreescrever a string
+ex: 
+	echo "ola mundo" > arquivo.txt
+	echo "sumiu" > arquivo.txt
+	cat arquivo.txt
+	 -> sumiu
+o operador >> concatenar no fim do arquivo, assim evitando a substituicao
+ex:
+	echo "ola mundo" >> arquivo.txt
+	echo "nao sumiu" >> arquivo.txt
+	cat arquivo.txt 
+	-> ola mundo
+	   nao sumiu
+	
+
+o comando cat serve para concanetar arquivos, porem pode ser usado para observar o conteudo de arquivos pequenos
+
+o comando more faz a mesma coisa que o cat, porem a diferenca esta com com arquivos muito grandes que nao cabem na tela, o comando more permite fazer a paginacao de arquivos ou da stdin(standard input), porem é um comando antigo que precisa processar todos o conteudo em memória para poder mostrar, não é muito eficiente
+
+o comando less faz a mesma coisa que o more, porem ele faz isso em strams,ou seja,nao precisa carregar o arquivo todo de ua veza para mostrar. Mais que siso, pode se usar comandos de navgao de texto VI por exemlo: 
+	j  para baixo
+	k para cima 
+	gg para voltar para o topo
+	G para ir ao fim do arquivo
+	10 j para descer 10 linhas
+	5k para subir 5 linhas
+	/palavra para procurar a palavra
+	q para sair
+
+o simbulo de | serve para conectar o stdout com o stdin de outro comandado 
+
+o comando ln -s arquivo1 arquivo2, o arquivo2 vira um link simbólico do arquivo1. o arquivo2 é so um atalho, mas pode ser usado como se fosse um arquivo normal, ex: cat arquivo2 
+
+
+tail é um comando que serve para ler o final  do arquivo, tail -10 arquivo.txt  serve para ler as 10 ultimas linhas do arquivo
+tail -f serve para se pendurar no final do arquivo e mostra o que sta acontecendo em tempo real 
+
+o comando grep é um comando antigo que serve para filtrar textos usando regex
+ex:
+	ls -la | grep .algo
+	-> só vai mostrar arquivos que tenha "algo" em sua cosntituicao
+	
+mv a.txt ww move o arquivo a.txt para o diretorio ww
+
+o comando rm remove  arquivos e rmdir diretorios, mas para remover diretorios com arquivos dentro tem que usar o comando rm -Rf diretorio
